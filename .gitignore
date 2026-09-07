@@ -47,6 +47,7 @@ next-env.d.ts
 
 # Local temp files
 temp/
+data/
 .playwright-mcp/
 /*-extraction.json
 /*-mobile-extraction.json

@@ -26,7 +26,7 @@ const footerLinks = [
   { label: "고객지원", href: "/cs" },
   { label: "이용약관", href: "/term-and-service" },
   { label: "개인정보보호정책", href: "/personal-info-policy" },
-  { label: "로그인", href: "#" },
+  { label: "로그인", href: "/admin/login" },
 ];
 
 const socials = [
@@ -363,7 +363,7 @@ export function EstimatePage() {
       <section className="estimate-section">
         <h1>견적문의/예약</h1>
         <p>문의를 남겨주시면, 빠른시간내에 답변을 드리거나 상담을 통해 예약을 도와드립니다.</p>
-        <Link className="write-button top" href="#">견적/예약 문의글 작성</Link>
+        <Link className="write-button top" href="/estimate/new">견적/예약 문의글 작성</Link>
         <div className="estimate-list">
           {estimates.map(([name, date, from, to]) => (
             <article className="estimate-card" key={`${name}-${date}-${from}`}>
@@ -374,7 +374,7 @@ export function EstimatePage() {
             </article>
           ))}
         </div>
-        <Link className="write-button bottom" href="#">견적/예약 문의글 작성</Link>
+        <Link className="write-button bottom" href="/estimate/new">견적/예약 문의글 작성</Link>
       </section>
     </SiteShell>
   );

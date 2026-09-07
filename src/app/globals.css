@@ -1114,6 +1114,238 @@ button {
   font-size: 18px;
 }
 
+.estimate-form-section,
+.estimate-done-section {
+  width: calc(100% - 100px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0 110px;
+}
+
+.estimate-form-section h1,
+.estimate-done-section h1 {
+  margin: 64px 0 32px;
+  color: #333;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.estimate-done-section {
+  min-height: 430px;
+  text-align: center;
+}
+
+.estimate-done-section p {
+  margin: 0;
+  color: #555;
+  font-size: 18px;
+}
+
+.estimate-form {
+  padding: 34px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 14px;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-weight: 400;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.form-secondary,
+.form-submit {
+  min-width: 112px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form-secondary {
+  border: 1px solid #ddd;
+  color: #555;
+  background: #fff;
+}
+
+.form-submit {
+  border: 0;
+  color: #fff;
+  background: #0d9ff2;
+  cursor: pointer;
+}
+
+.admin-section {
+  width: calc(100% - 100px);
+  max-width: 1100px;
+  min-height: 520px;
+  margin: 0 auto;
+  padding: 80px 0 110px;
+}
+
+.admin-section h1 {
+  margin: 0;
+  color: #333;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.admin-login-section {
+  max-width: 420px;
+  text-align: center;
+}
+
+.admin-login-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.admin-login-form input,
+.admin-estimate-card select {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 14px;
+  background: #fff;
+  font: inherit;
+}
+
+.admin-login-form p {
+  margin: 0;
+  color: #d92d20;
+}
+
+.admin-login-form button,
+.admin-head button,
+.admin-estimate-card button {
+  border: 0;
+  border-radius: 3px;
+  background: #222;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-login-form button {
+  height: 44px;
+}
+
+.admin-back-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: #777;
+}
+
+.admin-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.admin-head button {
+  height: 38px;
+  padding: 0 16px;
+}
+
+.admin-list {
+  display: grid;
+  gap: 16px;
+}
+
+.admin-estimate-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  padding: 22px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.admin-estimate-card div,
+.admin-estimate-card form,
+.admin-memo {
+  grid-column: 1 / -1;
+}
+
+.admin-estimate-card strong {
+  display: block;
+  font-size: 20px;
+}
+
+.admin-estimate-card span,
+.admin-estimate-card p {
+  margin: 0;
+  color: #555;
+}
+
+.admin-estimate-card b {
+  margin-right: 8px;
+  color: #222;
+}
+
+.admin-estimate-card form {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.admin-estimate-card button {
+  width: 80px;
+}
+
+.admin-empty {
+  color: #777;
+  text-align: center;
+}
+
 .write-button {
   width: 178px;
   height: 40px;
@@ -1749,6 +1981,54 @@ button {
   .estimate-section > p {
     font-size: 15px;
     line-height: 1.55;
+  }
+
+  .estimate-form-section,
+  .estimate-done-section {
+    width: calc(100% - (var(--mobile-gutter) * 2));
+    padding: 46px 0 82px;
+  }
+
+  .estimate-form-section h1,
+  .estimate-done-section h1 {
+    margin: 48px 0 24px;
+    font-size: 31px;
+  }
+
+  .estimate-form {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-secondary,
+  .form-submit {
+    width: 100%;
+  }
+
+  .admin-section {
+    width: calc(100% - (var(--mobile-gutter) * 2));
+    padding: 46px 0 82px;
+  }
+
+  .admin-section h1 {
+    font-size: 31px;
+  }
+
+  .admin-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-estimate-card {
+    grid-template-columns: 1fr;
+    padding: 18px;
   }
 
   .write-button {
